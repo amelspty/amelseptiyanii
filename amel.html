@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Menentukan index siswa</title>
+</head>
+<body>
+   <form onsubmit="return false">
+      <label for="text">Masukan nama</label>
+      <input type="text" id="nama">
+      <label for="nilai">Masukan nilai</label>
+      <input type="nilai" id="nilai">
+      <button onclick="cek_nilai()">CEK NILAI</button>
+   </form>
+   <div id="hasil"></div>
+   <script>
+      function cek_nilai () {
+      let nama= document.getElementById('nama').value
+      let nilai= document.getElementById('nilai').value
+         if (nilai >=90) {
+            document.getElementById('hasil').innerHTML = "Selamat " + nama +  " Mendapatkan Index A"
+         } else if(nilai >=80) {
+            document.getElementById('hasil').innerHTML = "Selamat " + nama +  " Mendapatkan index B"
+         } else if (nilai >=70) {
+            document.getElementById('hasil').innerHTML = "Selamat " + nama +  " Mendapatkan index C" 
+         } else if (nilai >=60){
+            document.getElementById('hasil').innerHTML = "Selamat " + nama +  " Mendapatkan index D"
+         } else {
+            document.getElementById('hasil').innerHTML = "Selamat " + nama +  " Mendapatkan index E"
+         }
+
+      }
+   </script>
+</body>
+</html>
